@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Calculator",
+    "\\Calculator\\Calculator",
+    "\\Calculator\\Calculator\\Calculator",
+    "\\Calculator\\Calculator\\Calculator.Android",
+    "\\Calculator\\Calculator\\Calculator.iOS"
+  ],
+  "SelectedNode": "\\Calculator\\Calculator\\Calculator\\MainPage.xaml",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage">
+
+    <StackLayout Padding="20" BackgroundColor="black">
+        <Frame
+            BackgroundColor="Black"
+            Padding="17"
+            BorderColor="Black">
+
+            <Label 
+                Text=" "
+                FontFamily="digital"
+                TextColor="WhiteSmoke"
+                FontSize="17"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Start"
+                x:Name="topLabel"/>
+
+        </Frame>
+
+        <Frame
+            BackgroundColor="WhiteSmoke"
+            Padding="45" Margin="0,0,0,20"
+            BorderColor="Black">
+
+            <Label 
+                Text="0"
+                FontFamily="digital"
+                FontSize="50" 
+                FontAttributes="Bold" 
+                HorizontalOptions="End" 
+                TextColor="Black"
+                x:Name="mainLabel"/>
+
+        </Frame>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!-- 1st Row -->
+            
+            <Button 
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="CE"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="PowderBlue"
+                Clicked="OnClear"/>
+            <Button 
+                Grid.Row="0"
+                Grid.Column="1"
+                Text="√"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="CornflowerBlue"
+                x:Name="BtnRadical"
+                Clicked="BtnRadical_clicked"/>
+            <Button 
+                Grid.Row="0"
+                Grid.Column="2"
+                Text="X²"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="CornflowerBlue"
+                Clicked="OnSelectSquare"/>
+            <Button 
+                Grid.Row="0"
+                Grid.Column="3"
+                Text="/"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="CornflowerBlue"
+                Clicked="OnSelectOperator"/>
+
+            <!-- 2nd Row -->
+
+            <Button 
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="7"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="WhiteSmoke"
+                Clicked="OnSelectNumber"/>
+            <Button 
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="8"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="WhiteSmoke"
+                Clicked="OnSelectNumber"/>
+            <Button 
+                Grid.Row="1"
+                Grid.Column="2"
+                Text="9"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="WhiteSmoke"
+                Clicked="OnSelectNumber"/>
+            <Button 
+                Grid.Row="1"
+                Grid.Column="3"
+                Text="*"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="CornflowerBlue"
+                Clicked="OnSelectOperator"/>
+
+            <!-- 3rd Row -->
+
+            <Button 
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="4"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="WhiteSmoke"
+                Clicked="OnSelectNumber"/>
+            <Button 
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="5"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="WhiteSmoke"
+                Clicked="OnSelectNumber"/>
+            <Button 
+                Grid.Row="2"
+                Grid.Column="2"
+                Text="6"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="WhiteSmoke"
+                Clicked="OnSelectNumber"/>
+            <Button 
+                Grid.Row="2"
+                Grid.Column="3"
+                Text="+"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="CornflowerBlue"
+                Clicked="OnSelectOperator"/>
+
+            <!-- 4th Row -->
+
+            <Button 
+                Grid.Row="3"
+                Grid.Column="0"
+                Text="1"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="WhiteSmoke"
+                Clicked="OnSelectNumber"/>
+            <Button 
+                Grid.Row="3"
+                Grid.Column="1"
+                Text="2"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="WhiteSmoke"
+                Clicked="OnSelectNumber"/>
+            <Button 
+                Grid.Row="3"
+                Grid.Column="2"
+                Text="3"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                BackgroundColor="WhiteSmoke"
+                Clicked="OnSelectNumber"/>
+            <Button 
+                Grid.Row="3"
+                Grid.Column="3"
+                Text="-"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold" 
+                BackgroundColor="CornflowerBlue"
+                Clicked="OnSelectOperator"/>
+
+            <!-- 5th Row -->
+
+            <Button 
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                Text="0"
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold" 
+                BackgroundColor="WhiteSmoke"
+                Clicked="OnSelectNumber"/>
+            <Button 
+                Grid.Row="4"
+                Grid.Column="2"
+                Text="."
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold" 
+                BackgroundColor="WhiteSmoke"
+                Clicked="OnSelectDecimal"/>
+            <Button 
+                Grid.Row="4"
+                Grid.Column="3"
+                Text="="
+                FontFamily="digital"
+                FontSize="Large"
+                FontAttributes="Bold"
+                Padding="25"
+                BackgroundColor="PowderBlue"
+                Clicked="OnCalculate"/>
+
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>
